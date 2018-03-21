@@ -1,13 +1,22 @@
 'use strict';
 
-// var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
+let searchParm; 
 
 
-//url += '?' + $.param({
-//  'api-key': "402206c1ad1e4b02a94655a84f0d41ce"
-//});
+$('document').ready(function(){
 
-url = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=402206c1ad1e4b02a94655a84f0d41ce&q=burglary"
+
+$('#searchButton').click(function() {
+    searchParm = $('#searchid1').val();
+    console.log(searchParm);
+})
+
+
+console.log(searchParm);
+
+let url = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=402206c1ad1e4b02a94655a84f0d41ce&q=burglary"
+
+
 
 $.ajax({
   url: url,
@@ -17,3 +26,7 @@ $.ajax({
 }).fail(function(err) {
   throw err;
 });
+
+
+
+})
