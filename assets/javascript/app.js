@@ -20,7 +20,10 @@ $('#searchButton').click(function() {
       throw err;
     });
 
-
+/* MIGHT ADD RESET CLICK EVENT TO RESET PAGE?
+$('#clearButton').on('click', fucntion()
+    $("#mainSection").trigger("reset");
+}); */
 
   })
 
